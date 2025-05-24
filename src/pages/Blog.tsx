@@ -20,9 +20,9 @@ interface BlogPost {
   view_count: number;
   created_at: string;
   profiles: {
-    full_name: string;
-    username: string;
-  };
+    full_name: string | null;
+    username: string | null;
+  } | null;
 }
 
 const Blog = () => {
@@ -41,8 +41,15 @@ const Blog = () => {
       const { data, error } = await supabase
         .from('blog_posts')
         .select(`
-          *,
-          profiles (
+          id,
+          title,
+          slug,
+          excerpt,
+          cover_image_url,
+          tags,
+          view_count,
+          created_at,
+          profiles!inner (
             full_name,
             username
           )
@@ -175,7 +182,7 @@ const Blog = () => {
 
                   {/* Meta */}
                   <div className="flex items-center justify-between text-sm text-cyber-text-muted">
-                    <span>By {post.profiles?.full_name || post.profiles?.username}</span>
+                    <span>By {post.profiles?.full_name || post.profiles?.username || 'Anonymous'}</span>
                     <span>{post.view_count} views</span>
                   </div>
 
