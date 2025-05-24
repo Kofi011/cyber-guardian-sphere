@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,26 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				cyber: {
+					blue: '#00D4FF',
+					purple: '#6366F1',
+					green: '#00FF88',
+					orange: '#FF6B35',
+					dark: '#0A0A0F',
+					navy: '#1A1A2E',
+					'text-primary': '#FFFFFF',
+					'text-secondary': '#A0A9C0',
+					'text-muted': '#6B7280'
 				}
+			},
+			backgroundImage: {
+				'cyber-gradient': 'linear-gradient(135deg, #00D4FF 0%, #6366F1 100%)',
+				'cyber-gradient-reverse': 'linear-gradient(135deg, #6366F1 0%, #00D4FF 100%)',
+				'cyber-card': 'linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(10, 10, 15, 0.9) 100%)',
+			},
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +95,40 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(0, 212, 255, 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px rgba(0, 212, 255, 0.8), 0 0 60px rgba(99, 102, 241, 0.3)'
+					}
+				},
+				'slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'matrix-rain': {
+					'0%': {
+						transform: 'translateY(-100vh)'
+					},
+					'100%': {
+						transform: 'translateY(100vh)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'slide-up': 'slide-up 0.6s ease-out',
+				'matrix-rain': 'matrix-rain 10s linear infinite'
 			}
 		}
 	},
