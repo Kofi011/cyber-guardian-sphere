@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -19,7 +18,8 @@ interface BlogPost {
   tags: string[];
   view_count: number;
   created_at: string;
-  profiles: {
+  user_id: string;
+  profiles?: {
     full_name: string | null;
     username: string | null;
   } | null;
@@ -50,7 +50,7 @@ const Blog = () => {
           view_count,
           created_at,
           user_id,
-          profiles!blog_posts_user_id_fkey (
+          profiles (
             full_name,
             username
           )
