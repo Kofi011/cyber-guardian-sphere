@@ -34,6 +34,20 @@
     --ring: 0 212 255;
 
     --radius: 0.5rem;
+
+    /* Custom Cyber Theme Colors */
+    --cyber-dark: 10 10 15;
+    --cyber-navy: 26 26 46;
+    --cyber-blue: 0 212 255;
+    --cyber-purple: 99 102 241;
+    --cyber-green: 0 255 136;
+    --cyber-orange: 255 165 0;
+    --cyber-red: 255 107 53;
+    --cyber-text-primary: 255 255 255;
+    --cyber-text-secondary: 203 213 225;
+    --cyber-text-muted: 148 163 184;
+    --cyber-gradient: linear-gradient(135deg, rgb(0, 212, 255) 0%, rgb(99, 102, 241) 100%);
+    --cyber-gradient-reverse: linear-gradient(135deg, rgb(99, 102, 241) 0%, rgb(0, 212, 255) 100%);
   }
 
   * {
@@ -75,6 +89,38 @@
     background-clip: text;
   }
 
+  .bg-cyber-gradient {
+    background: linear-gradient(135deg, #00D4FF 0%, #6366F1 100%);
+  }
+
+  .bg-cyber-gradient-reverse {
+    background: linear-gradient(135deg, #6366F1 0%, #00D4FF 100%);
+  }
+
+  .text-cyber-dark { color: rgb(var(--cyber-dark)); }
+  .text-cyber-navy { color: rgb(var(--cyber-navy)); }
+  .text-cyber-blue { color: rgb(var(--cyber-blue)); }
+  .text-cyber-purple { color: rgb(var(--cyber-purple)); }
+  .text-cyber-green { color: rgb(var(--cyber-green)); }
+  .text-cyber-orange { color: rgb(var(--cyber-orange)); }
+  .text-cyber-red { color: rgb(var(--cyber-red)); }
+  .text-cyber-text-primary { color: rgb(var(--cyber-text-primary)); }
+  .text-cyber-text-secondary { color: rgb(var(--cyber-text-secondary)); }
+  .text-cyber-text-muted { color: rgb(var(--cyber-text-muted)); }
+
+  .bg-cyber-dark { background-color: rgb(var(--cyber-dark)); }
+  .bg-cyber-navy { background-color: rgb(var(--cyber-navy)); }
+  .bg-cyber-blue { background-color: rgb(var(--cyber-blue)); }
+  .bg-cyber-purple { background-color: rgb(var(--cyber-purple)); }
+  .bg-cyber-green { background-color: rgb(var(--cyber-green)); }
+  .bg-cyber-orange { background-color: rgb(var(--cyber-orange)); }
+  .bg-cyber-red { background-color: rgb(var(--cyber-red)); }
+
+  .border-cyber-blue { border-color: rgb(var(--cyber-blue)); }
+  .border-cyber-purple { border-color: rgb(var(--cyber-purple)); }
+  .border-cyber-green { border-color: rgb(var(--cyber-green)); }
+  .border-cyber-red { border-color: rgb(var(--cyber-red)); }
+
   .matrix-bg {
     position: absolute;
     top: 0;
@@ -91,6 +137,20 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
     animation: matrix-rain 10s linear infinite;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
