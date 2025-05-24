@@ -49,7 +49,8 @@ const Blog = () => {
           tags,
           view_count,
           created_at,
-          profiles!inner (
+          user_id,
+          profiles!blog_posts_user_id_fkey (
             full_name,
             username
           )
